@@ -1,8 +1,54 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>About ME Page</title>
 </head>
 <body>
+
+<h1>About ME Page</h1>
+<h2>About ME Page</h2>
+<h3>About ME Page</h3>
+<h4>About ME Page</h4>
+<h5>About ME Page</h5>
+<h6>About ME Page</h6>
+
+<p>Hi I'm a paragraph</p>
+
+<ul>
+	<li>list item 1</li>
+	<li>list iten 2</li>
+</ul>
+
+<ol>
+	<li>list item 1</li>
+	<li>list item 2</li>
+	<li>list item 3</li>
+</ol>	
+
+
+
+<form id="sayHi">
+	<input id="firstname" type="text" name="firstname">
+	<input type="submit" value="Submit">
+</form>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+
+		$("#sayHi").on("submit", function (e) {
+
+			e.preventDefault();
+
+			var firstName = $("#firstname").val();
+
+			alert("Hello, " + firstName);
+
+		});
+
+	});
+</script>
 
 </body>
 </html>
