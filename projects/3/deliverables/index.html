@@ -1,66 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Project 3: Landing Page</title>
+	<title>Project 3: Landing Page: Super Brain</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 	<header>
-
+		<img src="assets/images/header.jpg">
 	</header>
+	<div class="container">
+		<content>
+			<div class="column" style="width:580px">
+				<h1>Amazing Brain</h1>
+				<img class="brainImg" src="assets/images/brain.jpg">
+				<p>Do you have a stupid brain? Do you want Amazing Brain? <strong>Amazing Brain</strong> is magical magicians with extra special features. Amazing Brain is super. Super <em>amazing</em> brain for you to try today. Try Amazing Brain.</p>
+			</div>
+			<div class="column" style="width:380px">
+				<h2>Sign up for Amazing Brain</h2>
+				<form id="cta">
+					<input class="tf name no-margin" type="text" name="firstname" placeholder ="First Name">
+					<input class="tf name no-margin" type="text" name="lastname" placeholder="Last name">
+					<input class="tf" type="email" name="emailaddress" placeholder="Email address">
+					
+					<label>Date of Birth</label>
+					<select name="month"></select> 
+					<select name="day"></select>
+					<select name="year"></select>
+					<format>month/day/year</format>
+					<label>Are you over 18?</label>
+					<input type="radio" name="over18" value="yes">Yes<input type="radio" name="over21" value="no">No
+					<label>Select the Amazing Brain powers you crave</label>
+					<input type="checkbox" name="favBrain" value="street">Street-Smarts
+					<input type="checkbox" name="favBrain" value="book">Book-Smarts
+					<input type="checkbox" name="favBrain" value="psychic">Psychic
+					<input class="submitBtn" type="submit" value="Submit">
+				</form>	
+			</div>
+			<div class="row">
+				<ul>
+					<li>
+						<img src="assets/images/brain.png">Street Smarts
+						<p>Street smarts keep you safe on the road or in tough situations</p>
+					</li>
+					<li>
+						<img src="assets/images/brain.png">Book Smarts
+						<p>Book smarts help you on the job and impressing at parties</p>
+					</li>
+					<li>
+						<img src="assets/images/brain.png">Psychic
+						<p>Know what people feel and think. Very Useful!</p>
+					</li>
+				</ul>
+			</div>	
+		</content>
 
-	<content>
-		<div class="row">
-			<div class="column"></div>
-			<!-- heading -->
-			<h1></h1>
-			<!--image-->
-			<!--paragraph-->
-			<p>
+	</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-			<div class="column"></div>
-			<h2></h2>
-			<form>
-				<input type="text" name="firstname">
-				<input type="text" name="lastname">
-				<input type="email" name="emailaddress">
-				
-				<label>DOB</label>
-				<select name="month">
-					<option value="1">January</option>
-					<option value="2">February</option>
-					<option value="3">March</option>
-					<option value="4">April</option>
-					<option value="5">May</option>
-					<option value="6">June</option>
-					<option value="7">July</option>
-					<option value="8">August</option>
-					<option value="9">September</option>
-					<option value="10">October</option>
-					<option value="11">November</option>
-					<option value="12">December</option>
-				</select>
-				<select name="days">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-				</select>
-				<select name="year">
-					<option value="1990">1990</option>
-				</select>	
+	<script type="text/javascript">
+	$(function(){
 
-				<label>Are you 21?</label>
-				<input type="radio" name="over21" value="yes">Yes
-				<input type="radio" name="over21" value="no" checked=>Yes
+		var minYear = new Date().getFullYear() - 18,
+		    day = $('select[name="day"]'),
+		    year = $('select[name="year"]');
 
-			<div class="column"></div>
-		</div>	
+		for(var i = 1; i <= 31; i++){
+			day.append( $("<option></option>").attr("value", i).text(i) );
+		};
+
+		for( ; minYear >= 1920; minYear--){
+			year.append( $("<option></option>").attr("value", minYear).text(minYear) );
+		};
+
+	});
+	</script>		
 </body>	
+<footer>
+	<p>2015 Amazing Brain.</p>
+</footer>
+</html>
