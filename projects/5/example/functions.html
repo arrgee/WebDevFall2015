@@ -97,7 +97,7 @@
 
     it("should pass functions as values", function () {
 
-      var appendRules = function (name) {
+      function appendRules (name) {
         return name + " rules!";
       };
 
@@ -106,6 +106,7 @@
       };
 
       var praiseSinger = { givePraise: appendRules };
+
       expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
 
       praiseSinger.givePraise = appendDoubleRules;

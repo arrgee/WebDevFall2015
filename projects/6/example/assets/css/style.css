@@ -1,0 +1,26 @@
+body {
+  background: rgb(221, 221, 221);
+}
+
+.container {
+  width: 760px;
+  margin: 0 auto;
+}
+
+.post {
+  border: 1px solid rgb(27, 27, 27);
+  padding: 15px;
+  margin: 0 0 15px 0;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.body {
+  font-size: 17px;
+  padding-bottom: 30px;
+  text-indent: 15px;
+}
